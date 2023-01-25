@@ -1,11 +1,12 @@
 <script setup>
 import iconLoader from './components/iconLoader.vue';
+import iconLoaderRaw from './components/iconLoaderRaw.vue';
 </script>
 
 <template>
   <div>
-    <iconLoader icon="vue" />
-    <iconLoader icon="circle" />
+    <iconLoader icon="policies" />
+    <iconLoaderRaw icon="policies" />
   </div>
 </template>
 

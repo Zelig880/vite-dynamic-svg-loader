@@ -3,15 +3,17 @@
     const props = defineProps({
         icon: String
     })
-    const iconName = ref(null);
+    const iconContent = ref(null);
 
-    import(`../assets/${props.icon}.svg`)
+    import(`../assets/${props.icon}.svg?raw`)
       .then((module) => {
-        iconName.value = module.default;
+        iconContent.value = module.default;
       })
       .catch(console.error.bind(console));
 </script>
 
 <template>
-    <component :is="iconName" />
+    <span v-html="iconContent">
+
+    </span>
 </template>
